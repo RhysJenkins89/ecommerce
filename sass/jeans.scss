@@ -1,0 +1,171 @@
+.container {
+    padding: 2.5rem;
+    margin: 5rem;
+
+    grid-row: 3 / 4;
+    
+    display: grid;
+    grid-template-columns: repeat(3, 33.3%);
+    grid-template-rows: 1fr 1fr;
+    grid-row-gap: 7.5rem;
+    justify-items: center;
+
+    @media only screen and (max-width: $breakpoint-main) {
+        grid-template-columns: repeat(2, 50%);
+        grid-row: 2 / 3;
+    }
+
+    @media only screen and (max-width: $breakpoint-tab) {
+        grid-template-columns: 100%;
+        grid-row: 2 / 3;
+    }
+}
+
+.card {
+    height: 40rem;
+    width: 25rem;
+    border: .15rem solid lightgrey;
+    transition: all 1s;
+
+    &__imageContainer {
+        height: 75%
+    }
+    
+    @media only screen and (max-width: $breakpoint-tab) {
+        height: 60rem;
+        width: 40rem;   
+    }
+
+    &:hover {
+        // transform: scale(1.1);
+        border: .15rem solid darkslategrey;
+
+
+        @media only screen and (max-width: $breakpoint-tab) {
+            transform: none;
+        }
+    }
+
+    &__image--red {
+        width: 100%;
+        height: 100%;
+        background-image: url("../img/pexels-zain-ali-1027130.jpg");
+        background-position: bottom;
+        background-size: cover;
+        // Photo: Zain Ali on Pexels 
+    }
+
+    &__image--adidas {
+        width: 100%;
+        height: 100%;
+        background-image: url("../img/pexels-david-geib-3268529.jpg");
+        background-position: bottom;
+        background-size: cover;
+        // Photo: David Geib on Pexels
+    }
+
+    &__image--red-adidas {
+        width: 100%;
+        height: 100%;
+        background-image: url("../img/camilla-carvalho-4IS9Sal3_ks-unsplash.jpg"); 
+        background-position: top;
+        background-size: cover;
+        // Photo: Camilla Carvalho on Unsplash
+    }
+
+    // &__image--blue-jeans {
+    //     width: 100%;
+    //     height: 100%;
+    //     background-image: url("/ecommerce-project/img/alfredh-h-nI7_xoc4_4A-unsplash.jpg");
+    //     background-position: top;
+    //     background-size: cover;
+        // Photo: Alfredh H on Unsplash
+    // }
+
+    // &__image--blue-top {
+    //     width: 100%;
+    //     height: 100%;
+    //     background-image: url("/ecommerce-project/img/peter-john-manlapig-RAjpj5SVvHI-unsplash.jpg");
+    //     background-position: top;
+    //     background-size: cover;
+        // Photo: Peter John Manlapig on Unsplash
+    // }
+
+    // &__image--mexico {
+    //     width: 100%;
+    //     height: 100%;
+    //     background-image: url("/ecommerce-project/img/rudy-lopez-eA5of0W3USA-unsplash.jpg");
+    //     background-position: top;
+    //     background-size: cover;
+        // Photo: Rudy López on Unsplash 
+    // }
+
+    // &__image--suit {
+    //     width: 100%;
+    //     height: 100%;
+    //     background-image: url("/ecommerce-project/img/alex-robinson-6Md6LUpsLp4-unsplash.jpg");
+    //     background-position: top;
+    //     background-size: cover;
+        // Photo: Photo by Alex Robinson on Unsplash
+    // }
+
+    // &__image--beard {
+    //     width: 100%;
+    //     height: 100%;
+    //     background-image: url("/ecommerce-project/img/sorin-sirbu-ifYt0sKdJYk-unsplash.jpg");
+    //     background-position: top;
+    //     background-size: cover;
+        // Photo: Photo by Sorin Sîrbu on Unsplash 
+    // }
+
+    // &__image--blonde {
+    //     width: 100%;
+    //     height: 100%;
+    //     background-image: url("/ecommerce-project/img/elijah-m-henderson-r9lTXKNtq7I-unsplash.jpg");
+    //     background-position: top;
+    //     background-size: cover;
+        // Photo: Elijah M. Henderson on Unsplash
+    // }
+
+    &__text {
+        padding: 1rem 0 0 1rem;
+
+        &--header {
+            font-size: 1.5rem;
+        }
+
+        &--item {
+            list-style: none;
+            font-size: 1.3rem;
+        }
+
+        &--button {
+            font-family: inherit;
+            padding: .25rem;
+            margin-top: .4rem;
+            background-color: transparent;
+            border: .1rem solid lightgrey;
+            transition: all 1s;
+
+            &:hover {
+                border: .1rem solid darkslategrey;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+
+
+
+
+// Red Nike shoes: Zain Ali on Pexels
+// White Adidas t-shirt: David Geib from Pexels
+// Red Adidas t-shirt: Camilla Carvalho on Unsplash
+
+
+
+
+
+
+

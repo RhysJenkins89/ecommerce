@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <!-- Media queries -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- CSS link -->
+    <link rel="stylesheet" href="/ecommerce-project/css/style.css">
+    
+    <!-- Google fonts link -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Noto+Serif:wght@400;700&display=swap" 
+    rel="stylesheet">
+
+    <!-- Font Awesome link -->
+    <script src="https://kit.fontawesome.com/4637f81001.js" crossorigin="anonymous"></script>
+    
+    <title>Ecommerce project</title>
+</head>
+<body class="grid">
+
+    <!-- Navbar -->
+    <nav class="nav">
+        <ul class="nav__list">
+            <!-- <h1 class="nav__logo"> -->
+                <a href="/ecommerce-project/index.html" target="_blank" class="nav__logo">
+                    Brand
+                </a>
+                <!-- While this is working with the styles, it's bad practice to not have the brand logo as
+                an h1 element. -->
+            <!-- </h1> -->
+            <li class="nav__list--item">Men</li>
+            <li class="nav__list--item">Women</li>
+
+            <a href="/ecommerce-project/login.html" target="_blank">
+                <li class="nav__list--item">
+                    <i class="far fa-user"></i>
+                </li>
+            </a>
+            
+            <li class="nav__list--item cartIcon">
+                <i class="fas fa-shopping-cart"></i>
+            </li>
+
+            <!-- Hamburger -->
+            <div class="nav__square">
+                <span class="nav__ham"></span>
+            </div>
+        </ul>
+    </nav>
+
+<!-- Shopping cart -->
+<div class="cart">
+    <ul class="cart__list">
+        <div class="cart__list--row">
+            <li class="cart__list--item">
+                <p class="cart__list--itemName">Shoes |</p>
+                <input class="cart__list--itemQuantity" type="number" value="1" min="1" max="10"> 
+                <span class="cart__list--itemPrice">£35.99</span>
+                <button class="remove">Remove</button> 
+                <span class="ogPrice">£35.99</span>
+            </li>
+        </div>
+        
+        <div class="cart__list--row">
+            <li class="cart__list--item">
+                <p class="cart__list--itemName">Cap |</p>
+                <input class="cart__list--itemQuantity" type="number" value="1" min="1" max="10">
+                <span class="cart__list--itemPrice">£25.50</span>
+                <button class="remove">Remove</button> 
+                <span class="ogPrice">£25.50</span>
+            </li>
+        </div>
+
+        <div class="cart__list--row">
+            <li class="cart__list--item">
+                <p class="cart__list--itemName">Jeans |</p>
+                <input class="cart__list--itemQuantity" type="number" value="1" min="1" max="10">
+                <span class="cart__list--itemPrice">£55.00</span>
+                <button class="remove">Remove</button> 
+                <span class="ogPrice">£55.00</span>
+            </li>
+        </div>
+    </ul>
+
+    <div class="cart__list--rowButtons">
+        <button class="update">Update</button>
+    </div>
+
+    <div class="cart__list--rowButtons">
+        <li class="cart__list--total">Total: 
+        </li>
+    </div>
+</div>
+
+<!-- Dark background -->
+<div class="overlay"></div>
+
+<!-- Landing gallery -->
+<div class="gallery">
+
+    <div class="gallery__image--three"></div>
+    <div class="gallery__image--sit"></div>
+    <div class="gallery__image--bridge"></div>
+    <div class="gallery__image--teal"></div>
+    <div class="gallery__image--dark"></div>
+    <div class="gallery__image--bar"></div>
+    <div class="gallery__image--start"></div>
+    <div class="gallery__image--roll"></div>
+
+</div>
+
+<!-- Main grid -->    
+<div class="container">
+
+    <div class="card">
+        <div class="card__imageContainer">
+            <div class="card__image--red">
+                &nbsp;
+            </div>
+        </div>
+        <ul class="card__text">
+            <h3 class="card__text--header">Nike trainers</h3>
+            <li class="card__text--item">£75</li>
+            <button class="card__text--button">Add to cart</button>
+        </ul>
+    </div>
+
+    <div class="card">
+        <div class="card__imageContainer">
+            <div class="card__image--adidas">
+                &nbsp;
+            </div>
+        </div>
+        <ul class="card__text">
+            <h3 class="card__text--header">Classic tee</h3>
+            <li class="card__text--item">£25</li>
+            <button class="card__text--button">Add to cart</button>
+        </ul>
+    </div>
+
+    <div class="card">
+        <div class="card__imageContainer">
+            <div class="card__image--red-adidas">
+                &nbsp;
+            </div>
+        </div>
+        <ul class="card__text">
+            <h3 class="card__text--header">Red three-stripe tee</h3>
+            <li class="card__text--item">£35</li>
+            <button class="card__text--button">Add to cart</button>
+        </ul>
+    </div>
+
+    <!-- <div class="card">
+        <h2 class="card__header"></h2>
+        <div class="card__image--blue-jeans">
+            &nbsp;
+        </div>
+        <ul class="card__list">
+            <li class="card__list--item"></li>
+            <li class="card__list--item"></li>
+            <li class="card__list--item"></li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2 class="card__header"></h2>
+        <div class="card__image--blue-top">
+            &nbsp;
+        </div>
+        <ul class="card__list">
+            <li class="card__list--item"></li>
+            <li class="card__list--item"></li>
+            <li class="card__list--item"></li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2 class="card__header"></h2>
+        <div class="card__image--mexico">
+            &nbsp;
+        </div>
+        <ul class="card__list">
+            <li class="card__list--item"></li>
+            <li class="card__list--item"></li>
+            <li class="card__list--item"></li>
+        </ul>
+    </div> -->
+
+    <!-- <div class="card">
+        <h2 class="card__header"></h2>
+        <div class="card__image--suit">
+            &nbsp;
+        </div>
+        <ul class="card__list">
+            <li class="card__list--item"></li>
+            <li class="card__list--item"></li>
+            <li class="card__list--item"></li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2 class="card__header"></h2>
+        <div class="card__image--beard">
+            &nbsp;
+        </div>
+        <ul class="card__list">
+            <li class="card__list--item"></li>
+            <li class="card__list--item"></li>
+            <li class="card__list--item"></li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2 class="card__header"></h2>
+        <div class="card__image--blonde">
+            &nbsp;
+        </div>
+        <ul class="card__list">
+            <li class="card__list--item"></li>
+            <li class="card__list--item"></li>
+            <li class="card__list--item"></li>
+        </ul>
+    </div> -->
+
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+    <ul class="footer__list">
+        <h1 class="footer__logo">Brand</h1>
+        <li class="footer__list--item">About</li>
+        <li class="footer__list--item">Contact</li>
+        <li class="footer__list--item">Services</li>
+    </ul>
+</footer>
+
+<script src="/ecommerce-project/main.js"></script>
+
+</body>
+</html>
+

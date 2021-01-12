@@ -1,0 +1,123 @@
+.gallery {
+    grid-row: 2 / 3;
+    margin: 5rem 7.5rem;
+    // border: .1rem solid black;
+
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-gap: 1.5rem;
+
+    @media only screen and (max-width: $breakpoint-main) {
+        // Gallery disappears below 1100px. 
+        display: none;
+    }    
+
+    &__text {
+        display: none;
+        text-align: center;
+        font-size: 2rem;
+        letter-spacing: 1.5rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: transparent;
+        background: linear-gradient(to right, $primary-brand, $primary-light);
+        -webkit-background-clip: text;
+
+        @media only screen and (max-width: $breakpoint-main) {
+            // Gallery disappears below 1100px.
+            display: none;
+            grid-column: 3 / 7;
+            grid-row: 1 / 4;
+            align-self: center;
+            padding: .5rem 2rem;
+        }
+    }
+
+    &__image--three {
+        grid-column: 1 / 3;
+        grid-row: 1 / 3;
+        background-image: url("/ecommerce-project/img/sport/bruce-mars-ZXq7xoo98b0-unsplash.jpg");
+        background-size: cover;
+    }
+
+    &__image--sit {
+        grid-column: 3 / 5;
+        grid-row: 1 / 4;
+        background-image: url("/ecommerce-project/img/anastase-maragos-HyvE5SiKMUs-unsplash.jpg");
+        background-size: cover;
+        background-position: center;
+
+        @media only screen and (max-width: $breakpoint-main) {
+            grid-column: 1 / 3;
+            grid-row: 4 / 6;
+        }
+    }
+
+    &__image--bridge {
+        grid-column: 1 / 3;
+        grid-row: 3 / 5;
+        background-image: url("/ecommerce-project/img/sport/curtis-macnewton-5rKPeFcsSTY-unsplash.jpg");
+        background-size: cover;
+
+        @media only screen and (max-width: $breakpoint-main) {
+            display: none;
+        }
+    }
+
+    &__image--teal {
+        grid-column: 7 / 9;
+        grid-row: 1 / 6;
+        background-image: url("/ecommerce-project/img/sport/tyler-nix-Y1drF0Y3Oe0-unsplash.jpg");
+        background-size: cover;
+
+        @media only screen and (max-width: $breakpoint-main) {
+            background-position: center;
+        }
+    }
+
+    &__image--dark {
+        grid-column: 3 / 6;
+        grid-row: 4 / 6;
+        background-image: url("/ecommerce-project/img/sport/nourdine-diouane-hcJnA6Tvy8g-unsplash.jpg");
+        background-size: cover;
+    }
+
+    &__image--bar {
+        grid-column: 5 / 7;
+        grid-row: 1 / 4;
+        background-image: url("/ecommerce-project/img/sport/allef-vinicius-do-0ghSDd2E-unsplash.jpg");
+        background-size: cover;
+
+        @media only screen and (max-width: $breakpoint-main) {
+            grid-column: 1 / 3;
+            grid-row: 1 / 4;
+            background-position: center;
+        }
+    }
+
+    &__image--start {
+        grid-column: 6 / 7;
+        grid-row: 4 / 6;
+        background-image: url("/ecommerce-project/img/sport/sam-knight-lFR7N0TCR_E-unsplash.jpg");
+        background-size: cover;
+        background-position: top;
+    }
+
+    &__image--roll {
+        grid-column: 1 / 3;
+        grid-row: 5 / 6;
+        background-image: url("/ecommerce-project/img/sport/jonathan-borba-0KGct860xWA-unsplash.jpg");
+        background-size: cover;
+        background-position: center;
+
+        @media only screen and (max-width: $breakpoint-main) {
+            display: none;
+        }
+    }
+}
+
+
+
+
+

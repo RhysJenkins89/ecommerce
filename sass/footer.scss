@@ -1,0 +1,73 @@
+.footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 15rem;
+    background-color: $whitesmoke;
+    grid-row: 4 / 5;
+
+    @media only screen and (max-width: $breakpoint-main) {
+        padding: 5rem 12.5rem;
+    }
+
+    @media only screen and (max-width: $breakpoint-tab) {
+        padding: 5rem 10rem;
+    }
+
+    &__logo {
+        padding: 0 2.5rem;
+        margin-right: auto;
+        font-size: 3rem;
+        text-transform: uppercase;
+        letter-spacing: 1.5rem;
+        font-weight: 400;
+        color: transparent;
+        background: linear-gradient(to right, $primary-brand, $primary-light);
+        -webkit-background-clip: text;
+
+        @media only screen and (max-width: $breakpoint-main) {
+            padding: 0 1.5rem;
+        }
+
+        @media only screen and (max-width: $breakpoint-tab) {
+            padding: 0 1rem;
+        }
+    }
+
+    &__list {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        list-style: none;
+
+        &--item {
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: .25rem;
+            padding: 0 2.5rem;
+            transition: all 1s;
+            // color: transparent;
+            // background: linear-gradient(to right, #000, #000);
+            // -webkit-background-clip: text;
+
+            @media only screen and (max-width: $breakpoint-main) {
+                padding: 0 1.5rem;
+            }
+
+            @media only screen and (max-width: $breakpoint-tab) {
+                padding: 0 1rem;
+            }
+
+            &:hover {
+                transform: scale(1.1);
+                color: $primary-brand;
+                cursor: pointer;
+                // background: linear-gradient(to right, #ff4b1f, #ff9068);
+                // -webkit-background-clip: text;
+                // color: transparent;
+            }
+        }
+    }
+}
+

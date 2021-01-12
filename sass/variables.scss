@@ -1,0 +1,14 @@
+// Media query variables
+
+$breakpoint-main: 1100px;
+$breakpoint-tab: 750px;
+
+// Colour variables
+
+$whitesmoke: #f5f5f5; 
+$primary-brand: #ff4b1f;
+$primary-light: #ff9068;
+$contrast-brand: #1fffe1;
+$dark-text: #000000;
+
+// Using only this page for the variables doesn't work. The base.scss file can't find them for some reason. 

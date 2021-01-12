@@ -1,0 +1,461 @@
+* {
+  padding: 0;
+  margin: 0; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+  @media only screen and (max-width: 1100px) {
+    html {
+      font-size: 55%; } }
+  @media only screen and (max-width: 750px) {
+    html {
+      font-size: 50%; } }
+
+body {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.6; }
+
+.grid {
+  display: grid;
+  grid-template-rows: 7.5rem 90vh 1fr 10rem; }
+  @media only screen and (max-width: 1100px) {
+    .grid {
+      grid-template-rows: 7.5rem 1fr 20rem; } }
+
+.grid-login {
+  display: grid;
+  grid-template-rows: 7.5rem 36vh 36vh 10rem; }
+  @media only screen and (max-width: 1100px) {
+    .grid-login {
+      grid-template-rows: 7.5rem 1fr 20rem; } }
+
+.container {
+  padding: 2.5rem;
+  margin: 5rem;
+  grid-row: 3 / 4;
+  display: grid;
+  grid-template-columns: repeat(3, 33.3%);
+  grid-template-rows: 1fr 1fr;
+  grid-row-gap: 7.5rem;
+  justify-items: center; }
+  @media only screen and (max-width: 1100px) {
+    .container {
+      grid-template-columns: repeat(2, 50%);
+      grid-row: 2 / 3; } }
+  @media only screen and (max-width: 750px) {
+    .container {
+      grid-template-columns: 100%;
+      grid-row: 2 / 3; } }
+
+.card {
+  height: 40rem;
+  width: 25rem;
+  border: .15rem solid lightgrey;
+  transition: all 1s; }
+  .card__imageContainer {
+    height: 75%; }
+  @media only screen and (max-width: 750px) {
+    .card {
+      height: 60rem;
+      width: 40rem; } }
+  .card:hover {
+    border: .15rem solid darkslategrey; }
+    @media only screen and (max-width: 750px) {
+      .card:hover {
+        transform: none; } }
+  .card__image--red {
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/pexels-zain-ali-1027130.jpg");
+    background-position: bottom;
+    background-size: cover; }
+  .card__image--adidas {
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/pexels-david-geib-3268529.jpg");
+    background-position: bottom;
+    background-size: cover; }
+  .card__image--red-adidas {
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/camilla-carvalho-4IS9Sal3_ks-unsplash.jpg");
+    background-position: top;
+    background-size: cover; }
+  .card__text {
+    padding: 1rem 0 0 1rem; }
+    .card__text--header {
+      font-size: 1.5rem; }
+    .card__text--item {
+      list-style: none;
+      font-size: 1.3rem; }
+    .card__text--button {
+      font-family: inherit;
+      padding: .25rem;
+      margin-top: .4rem;
+      background-color: transparent;
+      border: .1rem solid lightgrey;
+      transition: all 1s; }
+      .card__text--button:hover {
+        border: .1rem solid darkslategrey;
+        cursor: pointer; }
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 15rem;
+  background-color: #f5f5f5;
+  grid-row: 4 / 5; }
+  @media only screen and (max-width: 1100px) {
+    .footer {
+      padding: 5rem 12.5rem; } }
+  @media only screen and (max-width: 750px) {
+    .footer {
+      padding: 5rem 10rem; } }
+  .footer__logo {
+    padding: 0 2.5rem;
+    margin-right: auto;
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5rem;
+    font-weight: 400;
+    color: transparent;
+    background: linear-gradient(to right, #ff4b1f, #ff9068);
+    -webkit-background-clip: text; }
+    @media only screen and (max-width: 1100px) {
+      .footer__logo {
+        padding: 0 1.5rem; } }
+    @media only screen and (max-width: 750px) {
+      .footer__logo {
+        padding: 0 1rem; } }
+  .footer__list {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none; }
+    .footer__list--item {
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: .25rem;
+      padding: 0 2.5rem;
+      transition: all 1s; }
+      @media only screen and (max-width: 1100px) {
+        .footer__list--item {
+          padding: 0 1.5rem; } }
+      @media only screen and (max-width: 750px) {
+        .footer__list--item {
+          padding: 0 1rem; } }
+      .footer__list--item:hover {
+        transform: scale(1.1);
+        color: #ff4b1f;
+        cursor: pointer; }
+
+.nav {
+  display: flex;
+  align-items: center;
+  grid-row: 1 / 2;
+  background-color: #f5f5f5;
+  padding: 0 15rem; }
+  @media only screen and (max-width: 1100px) {
+    .nav {
+      padding: 0 12.5rem; } }
+  @media only screen and (max-width: 750px) {
+    .nav {
+      padding: 0 10rem; } }
+  .nav__logo {
+    padding: 0 2.5rem;
+    margin-right: auto;
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5rem;
+    font-weight: 400;
+    color: transparent;
+    background: linear-gradient(to right, #ff4b1f, #ff9068);
+    -webkit-background-clip: text; }
+    @media only screen and (max-width: 1100px) {
+      .nav__logo {
+        padding: 0 1.5rem; } }
+    @media only screen and (max-width: 750px) {
+      .nav__logo {
+        padding: 0 1rem; } }
+  .nav__list {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    list-style: none; }
+    .nav__list--item {
+      font-size: 1.75rem;
+      text-transform: uppercase;
+      letter-spacing: .25rem;
+      padding: 0 2.5rem;
+      cursor: pointer;
+      transition: all 1s; }
+      .nav__list--item:hover {
+        transform: scale(1.1);
+        color: #ff4b1f;
+        cursor: pointer; }
+      @media only screen and (max-width: 1100px) {
+        .nav__list--item {
+          padding: 0 1.5rem; } }
+      @media only screen and (max-width: 750px) {
+        .nav__list--item {
+          padding: 0 1rem;
+          display: none; } }
+  .nav__square {
+    height: 2.5rem;
+    width: 3rem;
+    transition: all 1s;
+    position: fixed; }
+    .nav__square.open .nav__ham {
+      background: transparent; }
+    .nav__square.open .nav__ham::before {
+      transform: rotate(-45deg); }
+    .nav__square.open .nav__ham::after {
+      transform: rotate(45deg); }
+  .nav__ham {
+    display: none;
+    height: .2rem;
+    width: 3rem;
+    background-color: #000000;
+    position: relative;
+    transition: all 1s; }
+    @media only screen and (max-width: 750px) {
+      .nav__ham {
+        display: inline-block; } }
+    .nav__ham::before, .nav__ham::after {
+      content: "";
+      position: absolute;
+      height: .2rem;
+      width: 3rem;
+      background-color: #000000;
+      transition: all 1s; }
+    .nav__ham::before {
+      transform: translateY(-0.9rem); }
+    .nav__ham::after {
+      transform: translateY(0.9rem); }
+
+.far,
+.fas {
+  font-size: 3rem;
+  color: transparent;
+  background: linear-gradient(to right, #ff4b1f, #ff9068);
+  -webkit-background-clip: text; }
+
+.gallery {
+  grid-row: 2 / 3;
+  margin: 5rem 7.5rem;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-gap: 1.5rem; }
+  @media only screen and (max-width: 1100px) {
+    .gallery {
+      display: none; } }
+  .gallery__text {
+    display: none;
+    text-align: center;
+    font-size: 2rem;
+    letter-spacing: 1.5rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: transparent;
+    background: linear-gradient(to right, #ff4b1f, #ff9068);
+    -webkit-background-clip: text; }
+    @media only screen and (max-width: 1100px) {
+      .gallery__text {
+        display: none;
+        grid-column: 3 / 7;
+        grid-row: 1 / 4;
+        align-self: center;
+        padding: .5rem 2rem; } }
+  .gallery__image--three {
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+    background-image: url("/ecommerce-project/img/sport/bruce-mars-ZXq7xoo98b0-unsplash.jpg");
+    background-size: cover; }
+  .gallery__image--sit {
+    grid-column: 3 / 5;
+    grid-row: 1 / 4;
+    background-image: url("/ecommerce-project/img/anastase-maragos-HyvE5SiKMUs-unsplash.jpg");
+    background-size: cover;
+    background-position: center; }
+    @media only screen and (max-width: 1100px) {
+      .gallery__image--sit {
+        grid-column: 1 / 3;
+        grid-row: 4 / 6; } }
+  .gallery__image--bridge {
+    grid-column: 1 / 3;
+    grid-row: 3 / 5;
+    background-image: url("/ecommerce-project/img/sport/curtis-macnewton-5rKPeFcsSTY-unsplash.jpg");
+    background-size: cover; }
+    @media only screen and (max-width: 1100px) {
+      .gallery__image--bridge {
+        display: none; } }
+  .gallery__image--teal {
+    grid-column: 7 / 9;
+    grid-row: 1 / 6;
+    background-image: url("/ecommerce-project/img/sport/tyler-nix-Y1drF0Y3Oe0-unsplash.jpg");
+    background-size: cover; }
+    @media only screen and (max-width: 1100px) {
+      .gallery__image--teal {
+        background-position: center; } }
+  .gallery__image--dark {
+    grid-column: 3 / 6;
+    grid-row: 4 / 6;
+    background-image: url("/ecommerce-project/img/sport/nourdine-diouane-hcJnA6Tvy8g-unsplash.jpg");
+    background-size: cover; }
+  .gallery__image--bar {
+    grid-column: 5 / 7;
+    grid-row: 1 / 4;
+    background-image: url("/ecommerce-project/img/sport/allef-vinicius-do-0ghSDd2E-unsplash.jpg");
+    background-size: cover; }
+    @media only screen and (max-width: 1100px) {
+      .gallery__image--bar {
+        grid-column: 1 / 3;
+        grid-row: 1 / 4;
+        background-position: center; } }
+  .gallery__image--start {
+    grid-column: 6 / 7;
+    grid-row: 4 / 6;
+    background-image: url("/ecommerce-project/img/sport/sam-knight-lFR7N0TCR_E-unsplash.jpg");
+    background-size: cover;
+    background-position: top; }
+  .gallery__image--roll {
+    grid-column: 1 / 3;
+    grid-row: 5 / 6;
+    background-image: url("/ecommerce-project/img/sport/jonathan-borba-0KGct860xWA-unsplash.jpg");
+    background-size: cover;
+    background-position: center; }
+    @media only screen and (max-width: 1100px) {
+      .gallery__image--roll {
+        display: none; } }
+
+.form {
+  width: 50rem;
+  height: 30rem;
+  margin: 10rem auto;
+  text-align: center; }
+  .form__group {
+    position: relative; }
+    .form__group.success input {
+      border-bottom: .2rem solid green; }
+    .form__group.success i.fa-check-circle {
+      visibility: visible;
+      color: green; }
+    .form__group.error input {
+      border-bottom: .2rem solid red; }
+    .form__group.error i.fa-exclamation-circle {
+      visibility: visible;
+      color: red; }
+    .form__group.error small {
+      visibility: visible;
+      color: red; }
+  .form__input {
+    width: 80%;
+    margin: 2.5rem 0 1rem 0;
+    font-family: inherit;
+    padding: 1.5rem 1.5rem;
+    border-radius: .3rem;
+    border: none;
+    background-color: #f5f5f5;
+    transition: all 1s;
+    border-bottom: .2rem solid transparent; }
+    .form__input:focus {
+      outline: none; }
+  .form__label {
+    opacity: 1;
+    display: block;
+    font-size: 1.3rem;
+    text-align: left;
+    margin-left: 6.5rem;
+    transition: all .75s; }
+  .form__input:placeholder-shown + .form__label {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-1.5rem); }
+  .form__button {
+    margin-top: 2.5rem;
+    font-family: inherit;
+    padding: 1.5rem 3rem;
+    border: .2rem solid transparent;
+    transition: all 1s; }
+    .form__button:focus {
+      outline: none; }
+    .form__button:active {
+      outline: none;
+      border: .2rem solid red; }
+
+.fa-check-circle,
+.fa-exclamation-circle {
+  font-size: 2.25rem;
+  color: black;
+  position: absolute;
+  top: 4rem;
+  left: 40rem;
+  visibility: hidden; }
+
+small {
+  font-size: 1.3rem;
+  position: absolute;
+  top: 9rem;
+  left: 36rem;
+  visibility: hidden; }
+
+.cart {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: whitesmoke;
+  height: 100vh;
+  width: 30vw;
+  z-index: 1;
+  transform: translateX(40rem);
+  transition: all 1s; }
+  .cart--open {
+    transform: translateX(0); }
+  .cart__list {
+    list-style: none;
+    font-family: inherit;
+    font-size: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    padding: 8rem 0 2rem 0; }
+    .cart__list--item {
+      padding: 1rem; }
+    .cart__list--rowButtons {
+      list-style: none;
+      font-family: inherit;
+      font-size: 1.75rem; }
+
+.cartIcon {
+  z-index: 2; }
+  .cartIcon--open:hover {
+    transform: none;
+    cursor: default; }
+
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(0.2rem);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 1s; }
+  .overlay--open {
+    visibility: visible;
+    opacity: 1; }
+
+.ogPrice {
+  display: none; }
