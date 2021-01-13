@@ -81,6 +81,10 @@
         position: fixed;
         cursor: pointer;
 
+        @media only screen and (max-width: 500px) {
+            padding: 0 5rem;
+        } // come back to this later.
+
         &.open .nav__ham {
             // transform: translateX(2rem);
             background: transparent;

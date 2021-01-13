@@ -21,6 +21,10 @@
         padding: 2.5rem;
         margin: 2.5rem 0;
     }
+
+    @media only screen and (max-width: 500px) {
+        padding: 2.5rem .5rem;
+    } // come back to this later.
 }
 
 .card {

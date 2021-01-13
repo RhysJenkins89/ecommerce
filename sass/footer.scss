@@ -45,6 +45,10 @@
         align-items: center;
         list-style: none;
 
+        @media only screen and (max-width: 500px) {
+            display: none;
+        } // come back to this later.
+
         &--item {
             font-size: 1.5rem;
             text-transform: uppercase;

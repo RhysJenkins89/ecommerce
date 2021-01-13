@@ -55,6 +55,9 @@ body {
       grid-row: 2 / 3;
       padding: 2.5rem;
       margin: 2.5rem 0; } }
+  @media only screen and (max-width: 500px) {
+    .container {
+      padding: 2.5rem .5rem; } }
 
 .card {
   height: 40rem;
@@ -135,6 +138,9 @@ body {
   @media only screen and (max-width: 750px) {
     .footer {
       padding: 5rem 2.5rem; } }
+  @media only screen and (max-width: 500px) {
+    .footer {
+      padding: 5rem .5rem; } }
   .footer__logo {
     padding: 0 2.5rem;
     margin-right: auto;
@@ -157,6 +163,9 @@ body {
     justify-content: flex-end;
     align-items: center;
     list-style: none; }
+    @media only screen and (max-width: 500px) {
+      .footer__list {
+        display: none; } }
     .footer__list--item {
       font-size: 1.5rem;
       text-transform: uppercase;
@@ -186,6 +195,9 @@ body {
   @media only screen and (max-width: 750px) {
     .nav {
       padding: 0 2.5rem; } }
+  @media only screen and (max-width: 500px) {
+    .nav {
+      padding: 5rem .5rem; } }
   .nav__logo {
     padding: 0 2.5rem;
     margin-right: auto;
@@ -232,6 +244,9 @@ body {
     transition: all 1s;
     position: fixed;
     cursor: pointer; }
+    @media only screen and (max-width: 500px) {
+      .nav__square {
+        padding: 0 5rem; } }
     .nav__square.open .nav__ham {
       background: transparent; }
     .nav__square.open .nav__ham::before {
