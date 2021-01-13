@@ -10,7 +10,7 @@
     }
 
     @media only screen and (max-width: 750px) {
-        padding: 0 10rem;
+        padding: 0 2.5rem;
     }
 
     &__logo {
@@ -75,6 +75,7 @@
         transition: all 1s;
         // border: 2px solid orangered;
         position: fixed;
+        cursor: pointer;
 
         &.open .nav__ham {
             // transform: translateX(2rem);
