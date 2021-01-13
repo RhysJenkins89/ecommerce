@@ -13,6 +13,10 @@
         padding: 0 2.5rem;
     }
 
+    @media only screen and (max-width: 500px) {
+        padding: 5rem .5rem;
+    } // come back to this later.
+
     &__logo {
         padding: 0 2.5rem;
         margin-right: auto;
