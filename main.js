@@ -49,9 +49,13 @@ for (var i = 0; i < remove.length; i++) {
         console.log("Clicked.");
         var buttonClicked = event.target;
         buttonClicked.parentElement.parentElement.remove();
+        console.log("Check.");
+        console.log(buttonClicked);
         updateCartTotal();
     })
 }
+
+// Do we need to an the click event when we add the item the cart in order to run the above code?
 
 // Update cart total function
 function updateCartTotal() {
@@ -101,6 +105,7 @@ for(var i = 0; i < addToCartButtons.length; i++){
     var button = addToCartButtons[i];
     button.addEventListener("click", function(event){
         var buttonTwo = event.target;
+        buttonTwo.innerText = "Added!";
         var shopItem = buttonTwo.parentElement;
         var title = shopItem.getElementsByClassName("card__text--header")[0].innerText;
         var price = shopItem.getElementsByClassName("card__text--item")[0].innerText;
@@ -133,16 +138,30 @@ function addItemToCart(title, price){
         `; 
     cartRow.innerHTML = cartRowContents;
     cartItems.append(cartRow);
-    // console.log(cartRow);
     var cartRowOne = cartRow.getElementsByClassName("remove")[0];
     console.log(cartRowOne);
     cartRowOne.addEventListener("click", function(event){
         var buttonClicked = event.target;
         buttonClicked.parentElement.parentElement.remove();
-        updateCartTotal();
+        for (var i = 0; i < addToCartButtons.length; i++) {
+            let clickedRemove = buttonClicked.parentNode.innerText;
+            let removeTitle = clickedRemove.substr(0, clickedRemove.indexOf(" |"));
+            let cleanTitle = removeTitle.trim();
+            const itemTitle = document.getElementsByClassName("card__text--header");
+            for (var i = 0; i < itemTitle.length; i++) {
+                const itemHeader = itemTitle[i];
+                let itemTop = itemHeader.innerText;
+                if (itemTop == cleanTitle) {
+                    itemHeader.parentElement.lastElementChild.innerText = "Add to cart"
+                    // The above line will break if the button is no longer the last child. 
+                } 
+            }
+        }
+        updateCartTotal(); 
     })
     updateCartTotal();
-    // Add an animation to the cart logo. 
+    // Add an animation to the cart logo.
+    // Turn off the hover effects on the button after the item is added to the cart.  
 }
 
 

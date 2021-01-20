@@ -6,7 +6,7 @@
     height: 100vh;
     width: 30vw;
     z-index: 1;
-    transform: translateX(40rem);
+    transform: translateX(50rem); // Fix this on lorge screens. 
     transition: all 1s;
 
     &--open {

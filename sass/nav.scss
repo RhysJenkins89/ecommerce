@@ -28,11 +28,11 @@
         background: linear-gradient(to right, $primary-brand, $primary-light);
         -webkit-background-clip: text;
 
-        @media only screen and (max-width: 1100px) {
+        @media only screen and (max-width: $breakpoint-main) {
             padding: 0 1.5rem;
         }
 
-        @media only screen and (max-width: 750px) {
+        @media only screen and (max-width: $breakpoint-tab) {
             padding: 0 1rem;
         }
     }
@@ -81,9 +81,9 @@
         position: fixed;
         cursor: pointer;
 
-        @media only screen and (max-width: 500px) {
+        @media only screen and (max-width: $breakpoint-phone) {
             padding: 0 5rem;
-        } // come back to this later.
+        }
 
         &.open .nav__ham {
             // transform: translateX(2rem);
