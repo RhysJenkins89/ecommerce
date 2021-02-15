@@ -1,70 +1,78 @@
 .cart {
-    position: fixed;
-    top: 0;
-    right: 0;
-    background-color: whitesmoke;
-    height: 100vh;
-    width: 30vw;
-    z-index: 1;
-    transform: translateX(50rem); // Fix this on lorge screens. 
-    transition: all 1s;
+  // Add an animation to the cart logo 
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: whitesmoke;
+  height: 100vh;
+  width: 30vw;
+  z-index: 1;
+  transform: translateX(50rem); // todo Fix this on lorge screens.
+  transition: all .75s;
+  padding: 2rem;
 
-    &--open {
-        transform: translateX(0);
+  &--open {
+    transform: translateX(0);
+  }
+
+  &__list {
+    list-style: none;
+    font-family: inherit;
+    font-size: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    // padding: 4rem 1rem 2rem 1rem;
+
+    &--heading {
+      border-bottom: 0.25rem solid black;
     }
 
-    &__list {
-        list-style: none;
-        font-family: inherit;
-        font-size: 1.75rem;
-        display: flex;
-        flex-direction: column;
-        padding: 8rem 0 2rem 0;
-
-        &--item {
-            padding: 1rem;
-        }
-
-        &--rowButtons {
-            list-style: none;
-            font-family: inherit;
-            font-size: 1.75rem;
-        }
+    &--item {
+      // display: flex;
+      padding: 1rem 0;
+      margin: 1rem 0;
+      border-bottom: 0.1rem solid darkslategrey;
     }
+
+    &--rowButtons {
+      display: flex;
+      justify-content: space-between;
+      list-style: none;
+      font-family: inherit;
+      font-size: 1.75rem;
+    }
+  }
 }
 
 .cartIcon {
-    z-index: 2;
+  // z-index: 2;
+  position: fixed;
 
-    &--open:hover {
-        transform: none;
-        cursor: default; // This is causing a minor glith when hovering over the icon.                 
-    }
+  &--open:hover {
+    transform: none;
+    cursor: default; // This is causing a minor glith when hovering over the icon.
+  }
 }
 
 .overlay {
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100vh;
-    width: 100vw;
-    background: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(.2rem);
-    visibility: hidden;
-    opacity: 0;
-    transition: all 1s;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(0.2rem);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 1s;
 
-    &--open {
-        visibility: visible;
-        opacity: 1;
-    }
+  &--open {
+    visibility: visible;
+    opacity: 1;
+  }
 }
 
 // Removing the og price
-
 .ogPrice {
-    display: none;
+  display: none;
 }
-
-
-

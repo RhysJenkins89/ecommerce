@@ -2,10 +2,13 @@
 <html lang="en">
 <head>
     
-    <!-- Media queries -->
+    <!-- Stando items -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
+    <!-- JavaScript link -->
+    <script type="module" src="./js/main.js" defer></script>
+
     <!-- CSS link -->
     <link rel="stylesheet" href="./css/style.css">
     
@@ -54,6 +57,7 @@
 <!-- Shopping cart -->
 <div class="cart">
     <ul class="cart__list">
+        <h2 class="cart__list--heading">Cart</h2>
         <!-- <div class="cart__list--row">
             <li class="cart__list--item">
                 <p class="cart__list--itemName">Shoes |</p>
@@ -88,12 +92,13 @@
 
     <div class="cart__list--rowButtons">
         <button class="update">Update</button>
+        <li class="cart__list--total">Total:</li>
     </div>
 
-    <div class="cart__list--rowButtons">
+    <!-- <div class="cart__list--rowButtons">
         <li class="cart__list--total">Total: 
         </li>
-    </div>
+    </div> -->
 </div>
 
 <!-- Dark background -->
@@ -251,8 +256,6 @@
         <li class="footer__list--item">Services</li>
     </ul>
 </footer>
-
-<script src="./main.js"></script>
 
 </body>
 </html>

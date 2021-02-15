@@ -206,7 +206,7 @@ body {
       padding: 0 2.5rem; } }
   @media only screen and (max-width: 500px) {
     .nav {
-      padding: 5rem .5rem; } }
+      padding: 5rem 0.5rem; } }
   .nav__logo {
     padding: 0 2.5rem;
     margin-right: auto;
@@ -232,7 +232,7 @@ body {
     .nav__list--item {
       font-size: 1.75rem;
       text-transform: uppercase;
-      letter-spacing: .25rem;
+      letter-spacing: 0.25rem;
       padding: 0 2.5rem;
       cursor: pointer;
       transition: all 1s; }
@@ -248,6 +248,7 @@ body {
           padding: 0 1rem;
           display: none; } }
   .nav__square {
+    visibility: hidden;
     height: 2.5rem;
     width: 3rem;
     transition: all 1s;
@@ -263,8 +264,7 @@ body {
     .nav__square.open .nav__ham::after {
       transform: rotate(45deg); }
   .nav__ham {
-    display: none;
-    height: .2rem;
+    height: 0.2rem;
     width: 3rem;
     background-color: #000000;
     position: relative;
@@ -275,7 +275,7 @@ body {
     .nav__ham::before, .nav__ham::after {
       content: "";
       position: absolute;
-      height: .2rem;
+      height: 0.2rem;
       width: 3rem;
       background-color: #000000;
       transition: all 1s; }
@@ -460,7 +460,8 @@ small {
   width: 30vw;
   z-index: 1;
   transform: translateX(50rem);
-  transition: all 1s; }
+  transition: all .75s;
+  padding: 2rem; }
   .cart--open {
     transform: translateX(0); }
   .cart__list {
@@ -468,17 +469,22 @@ small {
     font-family: inherit;
     font-size: 1.75rem;
     display: flex;
-    flex-direction: column;
-    padding: 8rem 0 2rem 0; }
+    flex-direction: column; }
+    .cart__list--heading {
+      border-bottom: 0.25rem solid black; }
     .cart__list--item {
-      padding: 1rem; }
+      padding: 1rem 0;
+      margin: 1rem 0;
+      border-bottom: 0.1rem solid darkslategrey; }
     .cart__list--rowButtons {
+      display: flex;
+      justify-content: space-between;
       list-style: none;
       font-family: inherit;
       font-size: 1.75rem; }
 
 .cartIcon {
-  z-index: 2; }
+  position: fixed; }
   .cartIcon--open:hover {
     transform: none;
     cursor: default; }
