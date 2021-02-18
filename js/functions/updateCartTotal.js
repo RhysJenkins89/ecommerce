@@ -8,7 +8,7 @@ function updateCartTotal() {
         const quantityElement = cartRow.getElementsByClassName("cart__list--itemQuantity")[0];
         const originalPriceElement = cartRow.getElementsByClassName("ogPrice")[0];
         const originalPrice = parseFloat( originalPriceElement.innerText.replace("£", "") );
-        const quantity = quantityElement.value;
+        const quantity = parseInt(quantityElement.innerHTML);
         const newPrice = originalPrice * quantity;
         priceElement.innerHTML = "£" + newPrice.toFixed(2);
         total = total + (originalPrice * quantity);

@@ -28,11 +28,11 @@
 }
 
 .card {
-    // Turn off the hover effects on the button after the item is added to the cart.
     height: 40rem;
     width: 25rem;
     border: .15rem solid lightgrey;
     transition: all 1s;
+    // todo add a popup after adding an item to the cart 
 
     &__imageContainer {
         height: 75%
@@ -160,10 +160,6 @@
             border: .1rem solid lightgrey;
             transition: all .5s;
 
-            &Clicked {
-                background-color: red;
-            }
-
             &:hover {
                 background-color: lightgray;
                 color: black;
@@ -173,28 +169,28 @@
                 // box-shadow: 0 1rem 2rem rgba(0, 0, 0, .2);
             }
 
+            &:focus {
+                outline: none;
+            }
+
             &:active {
                 outline: none;
                 // transform: translateY(0rem);
                 // box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
             }
         }
+
+        &--buttonNoHover {
+            font-family: inherit;
+            border-radius: .25rem;
+            padding: .25rem;
+            margin-top: .4rem;
+            background-color: transparent;
+            border: .1rem solid lightgrey;
+        
+            &:focus {
+                outline: none;
+            }
+        }
     }
 }
-
-
-
-
-
-// Red Nike shoes: Zain Ali on Pexels
-// White Adidas t-shirt: David Geib from Pexels
-// Red Adidas t-shirt: Camilla Carvalho on Unsplash
-// Dragonball t-shirt: Jusdevoyage on Unsplash
-// Newbalance: Benjamin Sow on Unsplash
-
-
-
-
-
-
-

@@ -2,7 +2,6 @@
 const cartBtn = document.querySelector(".fa-shopping-cart");
 const cartIcon = document.querySelector(".cartIcon");
 const cartMenu = document.querySelector(".cart");
-const remove = document.getElementsByClassName("remove");
 const overlay = document.querySelector(".overlay");
 const update = document.querySelector(".update");
 const addToCartButtons = document.getElementsByClassName("card__text--button");
@@ -46,3 +45,5 @@ menuBtn.addEventListener("click", () => {
         menuOpen = false;
     }
 });
+
+
