@@ -48,17 +48,6 @@ function addItemToCart(event){
     cartRowRemove.addEventListener("click", function(event){
         var buttonClicked = event.target;
         buttonClicked.parentElement.parentElement.remove();
-
-        // Updating the cart icon number
-        let cartNumber = document.getElementsByClassName("cart__list--row");
-        // let iconNum = parseInt(document.getElementsByClassName("nav__list--num")[0].innerText);
-        document.getElementsByClassName("nav__list--num")[0].innerText = cartNumber.length;
-        if (cartNumber.length == 0) {
-            newCon.classList.remove("nav__list--numVisible");
-        }
-        // todo this should update based on the quantity, not the amount of rows
-
-
         let clickedRemove = buttonClicked.parentNode.firstElementChild.innerText;
         const itemTitle = document.getElementsByClassName("card__text--header");
         for (var i = 0; i < itemTitle.length; i++) {
@@ -95,16 +84,7 @@ function addItemToCart(event){
         num--;
         newButton.parentElement.children.item(1).innerText = num;
     })
-
-    // Updating the cart icon number
-    let cartNumber = document.getElementsByClassName("cart__list--row");
-    // let iconNum = parseInt(document.getElementsByClassName("nav__list--num")[0].innerText);
-    document.getElementsByClassName("nav__list--num")[0].innerText = cartNumber.length;
-    const newCon = document.getElementsByClassName("nav__list--num")[0];
-    // newCon.classList.remove("nav__list--num");
-    newCon.classList.add("nav__list--numVisible");
-    // todo this should update based on the quantity, not the amount of rows
-
+    
     updateCartTotal();  
 }
 

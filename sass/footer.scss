@@ -15,7 +15,7 @@
     }
 
     @media only screen and (max-width: 500px) {
-        padding: 5rem .5rem;
+        padding: 5rem 0.5rem;
     } // come back to this later.
 
     &__logo {
@@ -43,12 +43,12 @@
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        list-style: none; 
+        list-style: none;
 
         &--item {
             font-size: 1.5rem;
             text-transform: uppercase;
-            letter-spacing: .25rem;
+            letter-spacing: 0.25rem;
             padding: 0 2.5rem;
             transition: all 1s;
             // color: transparent;
@@ -78,4 +78,3 @@
         }
     }
 }
-

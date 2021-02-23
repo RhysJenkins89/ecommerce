@@ -1,3 +1,5 @@
+import updateCartIconNum from "./updateCartIconNum.js";
+
 function updateCartTotal() {
     const cartItemsContainer = document.getElementsByClassName("cart__list")[0];
     const cartRows = cartItemsContainer.getElementsByClassName("cart__list--row");
@@ -14,6 +16,8 @@ function updateCartTotal() {
         total = total + (originalPrice * quantity);
     }
     document.querySelector(".cart__list--total").innerText = "Total: £" + total.toFixed(2);
+
+    updateCartIconNum();
 }
 
 export default updateCartTotal;
