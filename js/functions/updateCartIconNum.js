@@ -10,7 +10,7 @@ function updateCartIconNum() {
     
     // Displaying the number on the icon
     const newCon = document.getElementsByClassName("nav__list--num")[0];
-    newCon.classList.add("nav__list--numVisible");
+    // newCon.classList.add("nav__list--numVisible"); I'm not keen on how this looks at the moment.
 }
 
 export default updateCartIconNum;

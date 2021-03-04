@@ -50,10 +50,10 @@
             letter-spacing: 0.25rem;
             padding: 0 2.5rem;
             cursor: pointer;
-            transition: all 1s;
+            transition: all .75s;
 
             &:hover {
-                transform: scale(1.1);
+                transform: scale(1.2);
                 color: $primary-brand;
                 cursor: pointer;
                 // background: linear-gradient(to right, #ff4b1f, #ff9068);
@@ -72,10 +72,16 @@
         }
 
         &--num {
+            height: 2rem;
+            width: 2rem;
+            font-size: 1.5rem;
+            text-align: center;
             position: fixed;
-            top: 2.25rem;
-            right: 14rem;
+            top: 2.5%;
+            right: 13%;
             display: none;
+            // border: .2rem solid black;
+            border-radius: 50%;
         }
 
         &--numVisible {
@@ -158,3 +164,10 @@
     background: linear-gradient(to right, $primary-brand, $primary-light);
     -webkit-background-clip: text;
 }
+
+// .gg-shopping-cart {
+//     font-size: 3rem;
+//     height: 2rem;
+//     width: 2rem;
+//     color: red;
+// }

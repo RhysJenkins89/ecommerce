@@ -55,11 +55,16 @@ function addItemToCart(event){
             let itemTop = itemHeader.innerText;
             if (itemTop == clickedRemove) {
                 itemHeader.parentElement.lastElementChild.innerText = "Add to cart"
-                // The above line will break if the button is no longer the last child. 
+                console.log(itemHeader.parentElement.lastElementChild)
+                itemHeader.parentElement.lastElementChild.classList.remove("card__text--buttonNoHover"); 
+                itemHeader.parentElement.lastElementChild.classList.add("card__text--button"); 
             } 
         }
         updateCartTotal(); 
     })
+
+    // event.target.classList.add("card__text--button");
+    // event.target.classList.remove("card__text--buttonNoHover");
 
     // Adding listeners to the up buttons
     const upButton = cartRow.getElementsByClassName("cart__list--upButton")[0];
