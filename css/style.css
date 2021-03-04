@@ -508,7 +508,10 @@ small {
       justify-content: space-between;
       list-style: none;
       font-family: inherit;
-      font-size: 1.75rem; }
+      font-size: 1.75rem;
+      display: none; }
+      .cart__list--rowButtons--vis {
+        display: flex; }
 
 .cartIcon {
   position: fixed; }
@@ -533,3 +536,20 @@ small {
 
 .ogPrice {
   display: none; }
+
+.btn {
+  padding: .8rem;
+  font-family: inherit;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: #707070;
+  color: whitesmoke;
+  cursor: pointer; }
+  .btn:focus {
+    outline: none; }
+  .btn--quantity {
+    padding: .2rem;
+    height: 3.25rem;
+    width: 3.25rem; }
+    .btn--quantity:focus {
+      outline: none; }

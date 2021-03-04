@@ -2,6 +2,10 @@ import updateCartTotal from "./updateCartTotal.js";
 
 function addItemToCart(event){
     const addToCartButtons = document.getElementsByClassName("card__text--button");
+
+    // Showing update and total
+    const cartButtons = document.getElementsByClassName("cart__list--rowButtons")[0];
+    cartButtons.classList.add("cart__list--rowButtons--vis");
     
     // Updating the button text 
     const buttonTwo = event.target;
@@ -32,10 +36,10 @@ function addItemToCart(event){
             <li class="cart__list--item">
                 <p class="cart__list--itemName">${title}</p>
                 <p class="cart__list--itemQuantity">1</p>
-                <button class="cart__list--upButton">Up</button>
-                <button class="cart__list--downButton">Down</button>
+                <button class="btn btn--quantity cart__list--upButton">+</button>
+                <button class="btn btn--quantity cart__list--downButton">-</button>
                 <span class="cart__list--itemPrice">${price}</span>
-                <button class="remove cart__list--itemButton">Remove</button> 
+                <button class="remove btn cart__list--itemButton">Remove</button> 
                 <span class="ogPrice">${price}</span>
             </li>
         `; 
@@ -55,16 +59,18 @@ function addItemToCart(event){
             let itemTop = itemHeader.innerText;
             if (itemTop == clickedRemove) {
                 itemHeader.parentElement.lastElementChild.innerText = "Add to cart"
-                console.log(itemHeader.parentElement.lastElementChild)
                 itemHeader.parentElement.lastElementChild.classList.remove("card__text--buttonNoHover"); 
                 itemHeader.parentElement.lastElementChild.classList.add("card__text--button"); 
             } 
         }
+        const rowCheck = document.getElementsByClassName("cart__list--row");
+        if (rowCheck.length == 0) {
+            cartButtons.classList.remove("cart__list--rowButtons--vis")
+        } else {
+            cartButtons.classList.add("cart__list--rowButtons")
+        }
         updateCartTotal(); 
     })
-
-    // event.target.classList.add("card__text--button");
-    // event.target.classList.remove("card__text--buttonNoHover");
 
     // Adding listeners to the up buttons
     const upButton = cartRow.getElementsByClassName("cart__list--upButton")[0];

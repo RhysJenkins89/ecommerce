@@ -2,7 +2,7 @@ This is the readme file.
 
 I've put what I'm currently working on and my todo list here at the top of this readme. You'll find the technologies that I used for the project further down, as well as my general thoughts on the site.
 
-// I'm currently working on
+// Currently I'm working on
 * Styling the cart
 
 // Todo 
