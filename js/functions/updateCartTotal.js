@@ -4,7 +4,6 @@ function updateCartTotal() {
     const cartItemsContainer = document.getElementsByClassName("cart__list")[0];
     const cartRows = cartItemsContainer.getElementsByClassName("cart__list--row");
     let total = 0;
-    // console.log(cartRows);
     for (let i = 0; i < cartRows.length; i++) {
         const cartRow = cartRows[i];
         const priceElement = cartRow.getElementsByClassName("cart__list--itemPrice")[0];

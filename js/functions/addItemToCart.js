@@ -86,6 +86,7 @@ function addItemToCart(event){
         }
         num++;
         newButton.parentElement.lastElementChild.innerText = num;
+        updateCartTotal();
     })
 
     // Adding listeners to the down buttons 
@@ -98,6 +99,7 @@ function addItemToCart(event){
         } 
         num--;
         newButton.parentElement.lastElementChild.innerText = num;
+        updateCartTotal();
     })
     
     updateCartTotal();  

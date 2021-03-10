@@ -7,10 +7,10 @@ I've put what I'm currently working on and my todo list here at the top of this 
 
 // Todo 
 * Style the cart
-* Add cart update to the up/down buttons
 * Implement dark mode
 * Rewrite the BEM notation
 * Rewrite the verbose JavaScript
+* Add photo credit to this document
 
 // Technologies
 * HTML 
