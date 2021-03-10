@@ -30,7 +30,16 @@
             padding: 1rem 0;
             margin: 1rem 0;
             border-bottom: 0.1rem solid darkslategrey;
-            // display: flex;
+            display: flex;
+            flex-direction: column;
+        }
+
+        &--itemName {
+            width: 15rem;
+        }
+
+        &--itemPrice {
+            width: 15rem;
         }
 
         &--itemButton {
@@ -105,9 +114,20 @@
         padding: .2rem;
         height: 3.25rem;
         width: 3.25rem;
+        margin-right: 1.5rem;
 
         &:focus {
             outline: none;
         }
     }
 }
+
+.row-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    &--bottom {
+        margin-top: 2rem;
+    }
+} 

@@ -497,7 +497,13 @@ small {
     .cart__list--item {
       padding: 1rem 0;
       margin: 1rem 0;
-      border-bottom: 0.1rem solid darkslategrey; }
+      border-bottom: 0.1rem solid darkslategrey;
+      display: flex;
+      flex-direction: column; }
+    .cart__list--itemName {
+      width: 15rem; }
+    .cart__list--itemPrice {
+      width: 15rem; }
     .cart__list--itemButton {
       padding: 0.5rem;
       font-family: inherit;
@@ -550,6 +556,14 @@ small {
   .btn--quantity {
     padding: .2rem;
     height: 3.25rem;
-    width: 3.25rem; }
+    width: 3.25rem;
+    margin-right: 1.5rem; }
     .btn--quantity:focus {
       outline: none; }
+
+.row-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center; }
+  .row-container--bottom {
+    margin-top: 2rem; }

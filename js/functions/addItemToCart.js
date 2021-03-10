@@ -34,13 +34,17 @@ function addItemToCart(event){
     }; 
     let cartRowContents = `     
             <li class="cart__list--item">
-                <p class="cart__list--itemName">${title}</p>
-                <p class="cart__list--itemQuantity">1</p>
-                <button class="btn btn--quantity cart__list--upButton">+</button>
-                <button class="btn btn--quantity cart__list--downButton">-</button>
-                <span class="cart__list--itemPrice">${price}</span>
-                <button class="remove btn cart__list--itemButton">Remove</button> 
-                <span class="ogPrice">${price}</span>
+                <div class="row-container">
+                    <p class="cart__list--itemName">${title}</p>
+                    <button class="btn btn--quantity cart__list--upButton">+</button>
+                    <button class="btn btn--quantity cart__list--downButton">-</button>
+                    <p class="cart__list--itemQuantity">1</p>
+                </div>
+                <div class="row-container row-container--bottom">
+                    <span class="cart__list--itemPrice">${price}</span>
+                    <button class="remove btn cart__list--itemButton">Remove</button> 
+                    <span class="ogPrice">${price}</span>
+                </div>
             </li>
         `; 
 
@@ -51,8 +55,8 @@ function addItemToCart(event){
     const cartRowRemove = cartRow.getElementsByClassName("remove")[0];
     cartRowRemove.addEventListener("click", function(event){
         var buttonClicked = event.target;
-        buttonClicked.parentElement.parentElement.remove();
-        let clickedRemove = buttonClicked.parentNode.firstElementChild.innerText;
+        buttonClicked.parentElement.parentElement.parentElement.remove();
+        let clickedRemove = buttonClicked.parentNode.parentNode.firstElementChild.firstElementChild.innerText;
         const itemTitle = document.getElementsByClassName("card__text--header");
         for (var i = 0; i < itemTitle.length; i++) {
             const itemHeader = itemTitle[i];
@@ -76,24 +80,24 @@ function addItemToCart(event){
     const upButton = cartRow.getElementsByClassName("cart__list--upButton")[0];
     upButton.addEventListener("click", (event) => {
         let newButton = event.target;
-        let num = parseInt(newButton.parentElement.children.item(1).innerText);
+        let num = parseInt(newButton.parentElement.lastElementChild.innerText);
         if (num == 10) {
             return;
         }
         num++;
-        newButton.parentElement.children.item(1).innerText = num;
+        newButton.parentElement.lastElementChild.innerText = num;
     })
 
     // Adding listeners to the down buttons 
     const downButton = cartRow.getElementsByClassName("cart__list--downButton")[0];
     downButton.addEventListener("click", (event) => {
         let newButton = event.target;
-        let num = parseInt(newButton.parentElement.children.item(1).innerText);
+        let num = parseInt(newButton.parentElement.lastElementChild.innerText);
         if (num == 1) {
             return;
         } 
         num--;
-        newButton.parentElement.children.item(1).innerText = num;
+        newButton.parentElement.lastElementChild.innerText = num;
     })
     
     updateCartTotal();  
