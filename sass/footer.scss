@@ -6,17 +6,17 @@
     background-color: $whitesmoke;
     grid-row: 4 / 5;
 
-    @media only screen and (max-width: $breakpoint-main) {
+    @include main {
         padding: 5rem 12.5rem;
     }
 
-    @media only screen and (max-width: $breakpoint-tab) {
+    @include tab {
         padding: 5rem 2.5rem;
     }
 
-    @media only screen and (max-width: 500px) {
+    @include phone {
         padding: 5rem 0.5rem;
-    } // come back to this later.
+    }
 
     &__logo {
         padding: 0 2.5rem;
@@ -29,11 +29,11 @@
         background: linear-gradient(to right, $primary-brand, $primary-light);
         -webkit-background-clip: text;
 
-        @media only screen and (max-width: $breakpoint-main) {
+        @include main {
             padding: 0 1.5rem;
         }
 
-        @media only screen and (max-width: $breakpoint-tab) {
+        @include tab {
             padding: 0 1rem;
         }
     }
@@ -44,37 +44,31 @@
         justify-content: flex-end;
         align-items: center;
         list-style: none;
+    }
 
-        &--item {
-            font-size: 1.5rem;
-            text-transform: uppercase;
-            letter-spacing: 0.25rem;
-            padding: 0 2.5rem;
-            transition: all 1s;
-            // color: transparent;
-            // background: linear-gradient(to right, #000, #000);
-            // -webkit-background-clip: text;
+    &__item {
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        letter-spacing: 0.25rem;
+        padding: 0 2.5rem;
+        transition: all 1s;
 
-            @media only screen and (max-width: $breakpoint-main) {
-                padding: 0 1.5rem;
-            }
+        @include main {
+            padding: 0 1.5rem;
+        }
 
-            @media only screen and (max-width: $breakpoint-tab) {
-                padding: 0 1rem;
-            }
+        @include tab {
+            padding: 0 1rem;
+        }
 
-            @media only screen and (max-width: $breakpoint-phone) {
-                display: none;
-            }
+        @include phone {
+            display: none;
+        }
 
-            &:hover {
-                transform: scale(1.1);
-                color: $primary-brand;
-                cursor: pointer;
-                // background: linear-gradient(to right, #ff4b1f, #ff9068);
-                // -webkit-background-clip: text;
-                // color: transparent;
-            }
+        &:hover {
+            transform: scale(1.1);
+            color: $primary-brand;
+            cursor: pointer;
         }
     }
 }

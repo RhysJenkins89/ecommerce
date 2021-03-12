@@ -1,11 +1,9 @@
 // Media query variables
 
-// update check
-
-$breakpoint-main: 1100px;
-$breakpoint-tab: 750px;
-$breakpoint-phone: 500px;
-$breakpoint-phone-sm: 350px;
+$main: 1100px;
+$tab: 750px;
+$phone: 500px;
+$phone-sm: 350px;
 
 // Colour variables
 
@@ -32,11 +30,11 @@ html {
     box-sizing: border-box;
     font-size: 62.5%;
 
-    @media only screen and (max-width: $breakpoint-main) {
+    @include main {
         font-size: 55%;
     }
 
-    @media only screen and (max-width: $breakpoint-tab) {
+    @include tab {
         font-size: 50%;
     }
 }
@@ -55,38 +53,9 @@ body {
 .grid {
     display: grid;
     grid-template-rows: 7.5rem 90vh 1fr 10rem;
-
-    @media only screen and (max-width: $breakpoint-main) {
+    
+    @include main {
         grid-template-rows: 7.5rem 1fr 20rem;
-    }   
+    }
 }
-
-// Login page grid
-
-.grid-login {
-    display: grid;
-    grid-template-rows: 7.5rem 36vh 36vh 10rem;
-    // Come back to these rows later
-
-    @media only screen and (max-width: $breakpoint-main) {
-        grid-template-rows: 7.5rem 1fr 20rem;
-    }   
-}
-
-// Photo credit:
-
-// Runners on the bridge: Photo by Curtis MacNewton on Unsplash
-// Woman in teal leggings: Photo by Tyler Nix on Unsplash
-// Man crouching next to bar: Photo by Allef Vinicius on Unsplash
-// Woman stretching by water: Photo by Christopher Campbell on Unsplash
-// Women kneeling in studio: Photo by Bruce Mars on Unsplash
-// Man leaning on weight: Photo by Jesper Aggergaard on Unsplash
-// Man in red coat running: Photo by Nourdine Diouane on Unsplash
-// Sprint start: Photo by Sam Knight on Unsplash
-// Woman in orange leggings: Photo by Jonathan Borba on Unsplash
-// Man sitting: Photo by Anastase Maragos on Unsplash
-
-
-
-
 

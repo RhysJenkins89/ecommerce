@@ -1,35 +1,10 @@
 // In order to install sass, run npm init, followed by npm install node-sass --save-dev
 
-@import "sass/header.scss";
+@import "sass/mixins.scss";
 @import "sass/base.scss";
-@import "sass/jeans.scss";
+@import "sass/main-grid.scss";
 @import "sass/footer.scss";
 @import "sass/nav.scss";
 @import "sass/gallery.scss";
 @import "sass/login.scss";
-@import "sass/variables.scss";
 @import "sass/cart.scss";
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

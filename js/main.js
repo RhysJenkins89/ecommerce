@@ -3,9 +3,8 @@ const cartBtn = document.querySelector(".fa-shopping-cart");
 const cartIcon = document.querySelector(".cartIcon");
 const cartMenu = document.querySelector(".cart");
 const overlay = document.querySelector(".overlay");
-const update = document.querySelector(".update");
-const addToCartButtons = document.getElementsByClassName("card__text--button");
-const menuBtn = document.querySelector(".nav__square");
+const addToCartButtons = document.getElementsByClassName("card__button");
+const menuBtn = document.querySelector(".square");
 let menuOpen = false; 
 
 // Imports
@@ -25,9 +24,6 @@ overlay.addEventListener("click", () => {
     overlay.classList.remove("overlay--open");
     cartIcon.classList.remove("cartIcon--open");
 })
-
-// Update button
-update.addEventListener("click", updateCartTotal);
 
 // Add to cart buttons
 for(let i = 0; i < addToCartButtons.length; i++){  

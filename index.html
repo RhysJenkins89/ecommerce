@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
     <!-- Stando items -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +10,9 @@
 
     <!-- JavaScript link -->
     <script type="module" src="./js/main.js" defer></script>
+
+    <!-- jQuery link -->
+    <script src="./js/jquery-3.6.0.min.js" defer></script>
     
     <!-- Google fonts link -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Noto+Serif:wght@400;700&display=swap" rel="stylesheet">
@@ -22,50 +24,35 @@
 </head>
 <body class="grid">
 
-    <!-- Navbar -->
-    <nav class="nav">
-        <ul class="nav__list">
-            <!-- <h1 class="nav__logo"> -->
-                <a href="/ecommerce-project/index.html" class="nav__logo">
-                    Brand
-                </a>
-                <!-- While this is working with the styles, it's bad practice to not have the brand logo as
-                an h1 element. -->
-            <!-- </h1> -->
-            <!-- <li class="nav__list--item">Men</li>
-            <li class="nav__list--item">Women</li> -->
-            <!-- Remove these two items for now. Get the page up and working, and then add in more content. -->  
+<!-- Navbar -->
+<nav class="nav">
+    <ul class="nav__list">
+        <!-- Brand logo -->
+        <a href="/ecommerce-project/index.html" class="nav__logo">
+            Brand
+        </a>
+        
+        <!-- Cart icon -->
+        <li class="nav__icon cartIcon"> 
+            <i class="fas fa-shopping-cart"></i>
+        </li>
+        <!-- Download the icon -->
 
-            <!-- <a href="./login.html" target="_blank">
-                <li class="nav__list--item">
-                    <i class="far fa-user"></i>
-                </li>
-            </a> -->
-            
-            <li class="nav__list--item cartIcon">
-                <i class="fas fa-shopping-cart"></i>
-            </li>
-
-            <li class="nav__list--num">
-                <span>0</span>
-            </li>
-
-            <!-- Hamburger -->
-            <div class="nav__square">
-                <span class="nav__ham"></span>
-            </div>
-        </ul>
-    </nav>
+        <!-- Hamburger -->
+        <div class="square">
+            <span class="ham"></span>
+        </div>
+    </ul>
+</nav>
 
 <!-- Shopping cart -->
 <div class="cart">
-    <ul class="cart__list">
-        <h2 class="cart__list--heading">Cart</h2>
-    </ul>
+    <div class="cart__top">
+        <h2 class="cart__heading">Cart</h2>
+    </div>
 
-    <div class="cart__list--rowButtons">
-        <button class="update btn cart__list--updateButton">Update</button>
-        <li class="cart__list--total">Total:</li>
+    <div class="cart__bottom">
+        <p class="cart__total">Total: </p>
     </div>
 </div>
 
@@ -90,93 +77,93 @@
 <div class="container">
 
     <div class="card">
-        <div class="card__imageContainer">
-            <div class="card__image--newbalance">
+        <div class="card__image-container">
+            <div class="card__image card__image--newbalance">
                 &nbsp;
             </div>
         </div>
-        <ul class="card__text">
-            <h3 class="card__text--header">Trainers</h3>
-            <li class="card__text--item">£75</li>
-            <button class="card__text--button">Add to cart</button>
+        <ul class="card__text-container">
+            <h3 class="card__header">Trainers</h3>
+            <li class="card__price">£75</li>
+            <button class="card__button">Add to cart</button>
         </ul>
     </div>
 
     <div class="card">
-        <div class="card__imageContainer">
-            <div class="card__image--adidas">
+        <div class="card__image-container">
+            <div class="card__image card__image--adidas">
                 &nbsp;
             </div>
         </div>
-        <ul class="card__text">
-            <h3 class="card__text--header">Classic tee</h3>
-            <li class="card__text--item">£25</li>
-            <button class="card__text--button">Add to cart</button>
+        <ul class="card__text-container">
+            <h3 class="card__header">Classic tee</h3>
+            <li class="card__price">£25</li>
+            <button class="card__button">Add to cart</button>
         </ul>
     </div>
 
     <div class="card">
-        <div class="card__imageContainer">
-            <div class="card__image--red-adidas">
+        <div class="card__image-container">
+            <div class="card__image card__image--red-adidas">
                 &nbsp;
             </div>
         </div>
-        <ul class="card__text">
-            <h3 class="card__text--header">Three-stripe tee</h3>
-            <li class="card__text--item">£35</li>
-            <button class="card__text--button">Add to cart</button>
+        <ul class="card__text-container">
+            <h3 class="card__header">Three-stripe tee</h3>
+            <li class="card__price">£35</li>
+            <button class="card__button">Add to cart</button>
         </ul>
     </div>
 
     <div class="card">
-        <div class="card__imageContainer">
-            <div class="card__image--dragonball">
+        <div class="card__image-container">
+            <div class="card__image card__image--dragonball">
                 &nbsp;
             </div>
         </div>
-        <ul class="card__text">
-            <h3 class="card__text--header">Dragonball tee</h3>
-            <li class="card__text--item">£20</li>
-            <button class="card__text--button">Add to cart</button>
+        <ul class="card__text-container">
+            <h3 class="card__header">Dragonball tee</h3>
+            <li class="card__price">£20</li>
+            <button class="card__button">Add to cart</button>
         </ul>
     </div>
 
     <div class="card">
-        <div class="card__imageContainer">
-            <div class="card__image--bone">
+        <div class="card__image-container">
+            <div class="card__image card__image--bone">
                 &nbsp;
             </div>
         </div>
-        <ul class="card__text">
-            <h3 class="card__text--header">Bone hand tee</h3>
-            <li class="card__text--item">£20</li>
-            <button class="card__text--button">Add to cart</button>
+        <ul class="card__text-container">
+            <h3 class="card__header">Bone hand tee</h3>
+            <li class="card__price">£20</li>
+            <button class="card__button">Add to cart</button>
         </ul>
     </div>
 
     <div class="card">
-        <div class="card__imageContainer">
-            <div class="card__image--mexico">
+        <div class="card__image-container">
+            <div class="card__image card__image--mexico">
                 &nbsp;
             </div>
         </div>
-        <ul class="card__text">
-            <h3 class="card__text--header">Mexico football tee</h3>
-            <li class="card__text--item">£25</li>
-            <button class="card__text--button">Add to cart</button>
+        <ul class="card__text-container">
+            <h3 class="card__header">Mexico football tee</h3>
+            <li class="card__price">£25</li>
+            <button class="card__button">Add to cart</button>
         </ul>
     </div>
 
     <div class="card">
-        <div class="card__imageContainer">
-            <div class="card__image--jacket">
+        <div class="card__image-container">
+            <div class="card__image card__image--jacket">
                 &nbsp;
             </div>
         </div>
-        <ul class="card__text">
-            <h3 class="card__text--header">Leather jacket</h3>
-            <li class="card__text--item">£125</li>
-            <button class="card__text--button">Add to cart</button>
+        <ul class="card__text-container">
+            <h3 class="card__header">Leather jacket</h3>
+            <li class="card__price">£125</li>
+            <button class="card__button">Add to cart</button>
         </ul>
     </div>
 
@@ -186,14 +173,11 @@
 <footer class="footer">
     <ul class="footer__list">
         <h1 class="footer__logo">Brand</h1>
-        <li class="footer__list--item">About</li>
-        <li class="footer__list--item">Contact</li>
-        <li class="footer__list--item">Services</li>
+        <li class="footer__item">About</li>
+        <li class="footer__item">Contact</li>
+        <li class="footer__item">Services</li>
     </ul>
 </footer>
 
-
-
 </body>
 </html>
-

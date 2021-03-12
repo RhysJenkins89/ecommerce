@@ -1,0 +1,23 @@
+@mixin main {
+    @media only screen and (max-width: $main) {
+        @content;
+    }
+}
+
+@mixin tab {
+    @media only screen and (max-width: $tab) {
+        @content;
+    }
+}
+
+@mixin phone {
+    @media only screen and (max-width: $phone) {
+        @content;
+    }
+}
+
+@mixin phone-small {
+    @media only screen and (min-width: $phone-sm) {
+        @content;
+    }
+}

@@ -1,0 +1,154 @@
+.container {
+    padding: 2.5rem;
+    margin: 5rem;
+    grid-row: 3 / 4;
+    display: grid;
+    grid-template-columns: repeat(3, 33.3%);
+    grid-template-rows: 1fr 1fr;
+    grid-row-gap: 7.5rem;
+    justify-items: center;
+
+    @include main {
+        grid-template-columns: repeat(2, 50%);
+        grid-row: 2 / 3;
+    }
+
+    @include tab {
+        grid-template-columns: 100%;
+        grid-row: 2 / 3;
+        padding: 2.5rem;
+        margin: 2.5rem 0;
+    }
+
+    @include phone {
+        padding: 2.5rem .5rem;
+    }
+}
+
+.card {
+    height: 40rem;
+    width: 25rem;
+    border: .15rem solid lightgrey;
+    transition: all 1s;
+
+    @include tab {
+        height: 60rem;
+        width: 40rem;
+    }
+
+    @include phone-small {
+        height: 50rem;
+        width: 30rem;
+    }
+
+    &:hover {
+        border: .15rem solid darkslategrey;
+
+        @include tab {
+            transform: none;
+        }
+    }
+
+    &__image-container {
+        height: 75%
+    }
+
+    &__image {
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+
+        &--adidas {
+            background-image: url("../img/pexels-david-geib-3268529.jpg");
+            background-position: bottom;
+            // Photo: David Geib on Pexels
+        }
+
+        &--newbalance {
+            background-image: url("../img/benjamin-sow-s5nV624t42U-unsplash.jpg");
+            background-position: top;
+            // Photo: Benjamin Sow on Unsplash
+        }
+
+        &--red-adidas {
+            background-image: url("../img/camilla-carvalho-4IS9Sal3_ks-unsplash.jpg"); 
+            background-position: top;
+            // Photo: Camilla Carvalho on Unsplash
+        }
+
+        &--dragonball {
+            background-image: url("../img/jusdevoyage--w4HlwNLIM4-unsplash.jpg");
+            background-position: bottom;
+            // Photo: Jusdevoyage on Unsplash
+        }
+
+        &--mexico {
+            background-image: url("../img/rudy-lopez-eA5of0W3USA-unsplash.jpg");
+            background-position: top;
+            // Photo: Rudy López on Unsplash
+        }
+
+        &--bone {
+            background-image: url("../img/ian-dooley-8HqPXTToMn0-unsplash.jpg");
+            background-position: top;
+            // Photo: Photo by Ian Dooley on Unsplash
+        }
+
+        &--jacket {
+            background-image: url("../img/dami-adebayo-k6aQzmIbR1s-unsplash.jpg");
+            background-position: top;
+            // Photo: Photo by Dami Adebayo on Unsplash
+        }
+    }
+
+    &__text-container {
+        padding: 1rem 0 0 1rem;
+    }
+
+    &__header {
+        font-size: 1.5rem;
+    }
+
+    &__price {
+        list-style: none;
+        font-size: 1.3rem;
+    }
+
+    &__button {
+        font-family: inherit;
+        border-radius: .25rem;
+        padding: .25rem;
+        margin-top: .4rem;
+        background-color: transparent;
+        border: .1rem solid lightgrey;
+        transition: all .5s;
+
+        &:hover {
+            background-color: lightgray;
+            color: black;
+            border: .1rem solid darkslategrey;
+            cursor: pointer;
+        }
+
+        &:focus {
+            outline: none;
+        }
+
+        &:active {
+            outline: none;
+        }
+    }
+
+    &__button--no-hover {
+        font-family: inherit;
+        border-radius: .25rem;
+        padding: .25rem;
+        margin-top: .4rem;
+        background-color: transparent;
+        border: .1rem solid lightgrey;
+    
+        &:focus {
+            outline: none;
+        }
+    }
+}
